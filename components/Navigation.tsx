@@ -27,14 +27,15 @@ export default function Navigation() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="group">
-            <QapixLogo size="medium" variant="full" />
+          <Link href="/" className="group flex-shrink-0">
+            <QapixLogo size="small" variant="full" className="md:hidden" />
+            <QapixLogo size="medium" variant="full" className="hidden md:block" />
           </Link>
 
-          {/* Navigation Links */}
+          {/* Navigation Links - Desktop */}
           <div className="hidden md:flex items-center gap-6">
             <a
               href="https://app.qapix.de"
@@ -52,21 +53,15 @@ export default function Navigation() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-4">
+          {/* Mobile - Nur Login Button */}
+          <div className="md:hidden">
             <a
               href="https://app.qapix.de"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary text-sm px-4 py-2"
+              className="btn-secondary text-sm px-4 py-2 whitespace-nowrap"
             >
               Login
-            </a>
-            <a
-              href="mailto:kontakt@financemadesimple.de?subject=Qapix%20Demo%20Anfrage"
-              className="btn-primary text-sm px-4 py-2"
-            >
-              Anfragen
             </a>
           </div>
         </div>
