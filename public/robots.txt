@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qapix.com/sitemap.xml
+
